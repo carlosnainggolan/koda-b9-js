@@ -1,7 +1,7 @@
 function proccessArray (arr, processor) {
   const result = []
   for (let i = 0; i < arr.length; i++ ) {
-    result = processor(arr[i])
+    result[i] = processor(arr[i])
   }
   return result
 }
