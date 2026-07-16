@@ -19,8 +19,11 @@ Gambar : ${this.image}
 Genre : ${this.genre} `
   },
   dataCastName : function () {
+    let castName = []
     for (let i = 0; i < this.cast.length;  i++) {
-      return `Casting : ${this.cast[i].name}`
+      castName[i] = this.cast[i].name
+    }
+    return `Casting : ${castName}`
     }
   },
   changeTitle : function (newTitle) {
