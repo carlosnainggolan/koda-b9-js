@@ -1,5 +1,13 @@
 function proccessArray (arr, processor) {
   const result = []
+  if (!Array.isArray(arr)) {
+    return 'Invalid Array'
+  }
+
+  if (typeof processor !== 'function') {
+    return `invalid function`
+  }
+
   for (let i = 0; i < arr.length; i++ ) {
     result[i] = processor(arr[i])
   }
